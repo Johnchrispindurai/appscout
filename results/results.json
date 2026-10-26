@@ -1,0 +1,2773 @@
+{
+ "data": {
+  "kaggle": {
+   "raw_rows": 10841,
+   "shifted_rows_dropped": 1,
+   "duplicate_rows": 1181,
+   "apps_in_two_categories": 85,
+   "apps": 9659,
+   "missing_rating": 1463,
+   "size_varies": 1228,
+   "columns": [
+    "App",
+    "Category",
+    "Rating",
+    "Reviews",
+    "Size",
+    "Installs",
+    "Type",
+    "Price",
+    "Content Rating",
+    "Genres",
+    "Last Updated",
+    "Current Ver",
+    "Android Ver"
+   ],
+   "success_share": 0.352,
+   "paid_share": 0.078,
+   "categories": 33,
+   "genres": 48
+  },
+  "missing_pct": {
+   "App": 0.0,
+   "Category": 0.0,
+   "Reviews": 0.0,
+   "Installs": 0.0,
+   "Price": 0.0,
+   "Genres": 0.0,
+   "Last Updated": 0.0,
+   "Type": 0.01,
+   "Content Rating": 0.01,
+   "Android Ver": 12.59,
+   "Current Ver": 13.53,
+   "Rating": 13.6,
+   "Size": 15.64
+  },
+  "median_installs_rated": 100000,
+  "median_installs_unrated": 100,
+  "price_200_plus": 18,
+  "max_price": 400.0,
+  "reviews_iqr_outliers_log": 0,
+  "reviews": {
+   "rows": 64295,
+   "rows_with_text": 37427,
+   "apps": 1074,
+   "apps_with_text": 865,
+   "apps_matched": 816,
+   "sentiment_share": {
+    "Positive": 0.641,
+    "Negative": 0.221,
+    "Neutral": 0.138
+   },
+   "median_log_installs_covered": 6.349485002168009,
+   "median_log_installs_all": 5.0
+  },
+  "scrape": {
+   "scraped_at": "2026-10-26T17:43:57+00:00",
+   "store": "US, English",
+   "queries": 66,
+   "search_hits": 1669,
+   "apps_with_details": 1668,
+   "failed_lookups": 1,
+   "package": "google-play-scraper",
+   "categories": 33,
+   "success_share": 0.689,
+   "missing_rating": 128,
+   "paid_share": 0.022
+  }
+ },
+ "explore": {
+  "describe": {
+   "rating": {
+    "count": 8196.0,
+    "mean": 4.173,
+    "median": 4.3,
+    "var": 0.288,
+    "std": 0.536,
+    "min": 1.0,
+    "max": 5.0,
+    "skew": -1.745
+   },
+   "installs": {
+    "count": 9659.0,
+    "mean": 7798170.248,
+    "median": 100000.0,
+    "var": 2891183737168894.5,
+    "std": 53769728.818,
+    "min": 0.0,
+    "max": 1000000000.0,
+    "skew": 15.027
+   },
+   "log_installs": {
+    "count": 9659.0,
+    "mean": 4.643,
+    "median": 5.0,
+    "var": 3.649,
+    "std": 1.91,
+    "min": 0.0,
+    "max": 9.0,
+    "skew": -0.285
+   },
+   "reviews": {
+    "count": 9659.0,
+    "mean": 216804.11,
+    "median": 969.0,
+    "var": 3354136625860.067,
+    "std": 1831430.213,
+    "min": 0.0,
+    "max": 78158306.0,
+    "skew": 26.57
+   },
+   "log_reviews": {
+    "count": 9659.0,
+    "mean": 2.969,
+    "median": 2.987,
+    "var": 3.292,
+    "std": 1.814,
+    "min": 0.0,
+    "max": 7.893,
+    "skew": 0.045
+   },
+   "size_mb": {
+    "count": 8431.0,
+    "mean": 20.398,
+    "median": 12.0,
+    "var": 476.503,
+    "std": 21.829,
+    "min": 0.008,
+    "max": 100.0,
+    "skew": 1.645
+   },
+   "price": {
+    "count": 9659.0,
+    "mean": 1.097,
+    "median": 0.0,
+    "var": 283.977,
+    "std": 16.852,
+    "min": 0.0,
+    "max": 400.0,
+    "skew": 22.533
+   },
+   "android": {
+    "count": 8666.0,
+    "mean": 3.842,
+    "median": 4.0,
+    "var": 0.726,
+    "std": 0.852,
+    "min": 1.0,
+    "max": 8.0,
+    "skew": -0.655
+   }
+  },
+  "categories": {
+   "FAMILY": {
+    "apps": 1877,
+    "median_installs": 50000.0,
+    "success_rate": 0.302,
+    "mean_rating": 4.184,
+    "paid_share": 0.099
+   },
+   "GAME": {
+    "apps": 945,
+    "median_installs": 1000000.0,
+    "success_rate": 0.57,
+    "mean_rating": 4.244,
+    "paid_share": 0.087
+   },
+   "TOOLS": {
+    "apps": 829,
+    "median_installs": 50000.0,
+    "success_rate": 0.332,
+    "mean_rating": 4.04,
+    "paid_share": 0.094
+   },
+   "BUSINESS": {
+    "apps": 420,
+    "median_installs": 1000.0,
+    "success_rate": 0.164,
+    "mean_rating": 4.098,
+    "paid_share": 0.029
+   },
+   "MEDICAL": {
+    "apps": 395,
+    "median_installs": 1000.0,
+    "success_rate": 0.046,
+    "mean_rating": 4.166,
+    "paid_share": 0.208
+   },
+   "PERSONALIZATION": {
+    "apps": 376,
+    "median_installs": 10000.0,
+    "success_rate": 0.293,
+    "mean_rating": 4.332,
+    "paid_share": 0.215
+   },
+   "PRODUCTIVITY": {
+    "apps": 374,
+    "median_installs": 100000.0,
+    "success_rate": 0.393,
+    "mean_rating": 4.183,
+    "paid_share": 0.075
+   },
+   "LIFESTYLE": {
+    "apps": 369,
+    "median_installs": 10000.0,
+    "success_rate": 0.228,
+    "mean_rating": 4.093,
+    "paid_share": 0.051
+   },
+   "FINANCE": {
+    "apps": 345,
+    "median_installs": 10000.0,
+    "success_rate": 0.27,
+    "mean_rating": 4.116,
+    "paid_share": 0.049
+   },
+   "SPORTS": {
+    "apps": 325,
+    "median_installs": 100000.0,
+    "success_rate": 0.363,
+    "mean_rating": 4.216,
+    "paid_share": 0.074
+   },
+   "COMMUNICATION": {
+    "apps": 315,
+    "median_installs": 100000.0,
+    "success_rate": 0.444,
+    "mean_rating": 4.121,
+    "paid_share": 0.086
+   },
+   "HEALTH_AND_FITNESS": {
+    "apps": 288,
+    "median_installs": 100000.0,
+    "success_rate": 0.389,
+    "mean_rating": 4.243,
+    "paid_share": 0.052
+   },
+   "PHOTOGRAPHY": {
+    "apps": 281,
+    "median_installs": 1000000.0,
+    "success_rate": 0.616,
+    "mean_rating": 4.156,
+    "paid_share": 0.068
+   },
+   "NEWS_AND_MAGAZINES": {
+    "apps": 254,
+    "median_installs": 50000.0,
+    "success_rate": 0.331,
+    "mean_rating": 4.122,
+    "paid_share": 0.008
+   },
+   "SOCIAL": {
+    "apps": 239,
+    "median_installs": 100000.0,
+    "success_rate": 0.418,
+    "mean_rating": 4.247,
+    "paid_share": 0.013
+   },
+   "BOOKS_AND_REFERENCE": {
+    "apps": 222,
+    "median_installs": 10000.0,
+    "success_rate": 0.239,
+    "mean_rating": 4.345,
+    "paid_share": 0.126
+   },
+   "TRAVEL_AND_LOCAL": {
+    "apps": 219,
+    "median_installs": 100000.0,
+    "success_rate": 0.425,
+    "mean_rating": 4.07,
+    "paid_share": 0.055
+   },
+   "SHOPPING": {
+    "apps": 202,
+    "median_installs": 1000000.0,
+    "success_rate": 0.525,
+    "mean_rating": 4.231,
+    "paid_share": 0.01
+   },
+   "DATING": {
+    "apps": 170,
+    "median_installs": 10000.0,
+    "success_rate": 0.194,
+    "mean_rating": 3.98,
+    "paid_share": 0.029
+   },
+   "VIDEO_PLAYERS": {
+    "apps": 164,
+    "median_installs": 1000000.0,
+    "success_rate": 0.518,
+    "mean_rating": 4.045,
+    "paid_share": 0.024
+   },
+   "MAPS_AND_NAVIGATION": {
+    "apps": 131,
+    "median_installs": 100000.0,
+    "success_rate": 0.412,
+    "mean_rating": 4.036,
+    "paid_share": 0.038
+   },
+   "FOOD_AND_DRINK": {
+    "apps": 112,
+    "median_installs": 300000.0,
+    "success_rate": 0.438,
+    "mean_rating": 4.171,
+    "paid_share": 0.018
+   },
+   "EDUCATION": {
+    "apps": 106,
+    "median_installs": 1000000.0,
+    "success_rate": 0.585,
+    "mean_rating": 4.351,
+    "paid_share": 0.019
+   },
+   "ENTERTAINMENT": {
+    "apps": 86,
+    "median_installs": 1000000.0,
+    "success_rate": 0.837,
+    "mean_rating": 4.129,
+    "paid_share": 0.023
+   },
+   "AUTO_AND_VEHICLES": {
+    "apps": 85,
+    "median_installs": 100000.0,
+    "success_rate": 0.212,
+    "mean_rating": 4.19,
+    "paid_share": 0.035
+   },
+   "LIBRARIES_AND_DEMO": {
+    "apps": 84,
+    "median_installs": 10000.0,
+    "success_rate": 0.155,
+    "mean_rating": 4.178,
+    "paid_share": 0.012
+   },
+   "WEATHER": {
+    "apps": 79,
+    "median_installs": 1000000.0,
+    "success_rate": 0.532,
+    "mean_rating": 4.243,
+    "paid_share": 0.101
+   },
+   "HOUSE_AND_HOME": {
+    "apps": 73,
+    "median_installs": 500000.0,
+    "success_rate": 0.411,
+    "mean_rating": 4.141,
+    "paid_share": 0.0
+   },
+   "EVENTS": {
+    "apps": 64,
+    "median_installs": 1000.0,
+    "success_rate": 0.094,
+    "mean_rating": 4.436,
+    "paid_share": 0.016
+   },
+   "ART_AND_DESIGN": {
+    "apps": 61,
+    "median_installs": 100000.0,
+    "success_rate": 0.197,
+    "mean_rating": 4.359,
+    "paid_share": 0.049
+   },
+   "PARENTING": {
+    "apps": 60,
+    "median_installs": 100000.0,
+    "success_rate": 0.25,
+    "mean_rating": 4.3,
+    "paid_share": 0.033
+   },
+   "COMICS": {
+    "apps": 56,
+    "median_installs": 100000.0,
+    "success_rate": 0.286,
+    "mean_rating": 4.181,
+    "paid_share": 0.0
+   },
+   "BEAUTY": {
+    "apps": 53,
+    "median_installs": 50000.0,
+    "success_rate": 0.189,
+    "mean_rating": 4.279,
+    "paid_share": 0.0
+   }
+  },
+  "top_success_categories": [
+   "ENTERTAINMENT",
+   "PHOTOGRAPHY",
+   "EDUCATION",
+   "GAME",
+   "WEATHER"
+  ],
+  "bottom_success_categories": [
+   "BEAUTY",
+   "BUSINESS",
+   "LIBRARIES_AND_DEMO",
+   "EVENTS",
+   "MEDICAL"
+  ],
+  "corr_spearman": {
+   "log_installs": {
+    "log_installs": 1.0,
+    "log_reviews": 0.968,
+    "rating": 0.027,
+    "size_mb": 0.31,
+    "log_price": -0.232,
+    "android": 0.048,
+    "days_since_update": -0.332,
+    "n_genres": 0.1
+   },
+   "log_reviews": {
+    "log_installs": 0.968,
+    "log_reviews": 1.0,
+    "rating": 0.12,
+    "size_mb": 0.33,
+    "log_price": -0.15,
+    "android": 0.045,
+    "days_since_update": -0.336,
+    "n_genres": 0.092
+   },
+   "rating": {
+    "log_installs": 0.027,
+    "log_reviews": 0.12,
+    "rating": 1.0,
+    "size_mb": 0.05,
+    "log_price": 0.071,
+    "android": 0.059,
+    "days_since_update": -0.182,
+    "n_genres": 0.032
+   },
+   "size_mb": {
+    "log_installs": 0.31,
+    "log_reviews": 0.33,
+    "rating": 0.05,
+    "size_mb": 1.0,
+    "log_price": -0.049,
+    "android": 0.245,
+    "days_since_update": -0.311,
+    "n_genres": 0.18
+   },
+   "log_price": {
+    "log_installs": -0.232,
+    "log_reviews": -0.15,
+    "rating": 0.071,
+    "size_mb": -0.049,
+    "log_price": 1.0,
+    "android": -0.109,
+    "days_since_update": 0.151,
+    "n_genres": 0.077
+   },
+   "android": {
+    "log_installs": 0.048,
+    "log_reviews": 0.045,
+    "rating": 0.059,
+    "size_mb": 0.245,
+    "log_price": -0.109,
+    "android": 1.0,
+    "days_since_update": -0.468,
+    "n_genres": 0.005
+   },
+   "days_since_update": {
+    "log_installs": -0.332,
+    "log_reviews": -0.336,
+    "rating": -0.182,
+    "size_mb": -0.311,
+    "log_price": 0.151,
+    "android": -0.468,
+    "days_since_update": 1.0,
+    "n_genres": -0.004
+   },
+   "n_genres": {
+    "log_installs": 0.1,
+    "log_reviews": 0.092,
+    "rating": 0.032,
+    "size_mb": 0.18,
+    "log_price": 0.077,
+    "android": 0.005,
+    "days_since_update": -0.004,
+    "n_genres": 1.0
+   }
+  },
+  "corr_pearson": {
+   "log_installs": {
+    "log_installs": 1.0,
+    "log_reviews": 0.958,
+    "rating": 0.084,
+    "size_mb": 0.299,
+    "log_price": -0.195,
+    "android": 0.029,
+    "days_since_update": -0.182,
+    "n_genres": 0.098
+   },
+   "log_reviews": {
+    "log_installs": 0.958,
+    "log_reviews": 1.0,
+    "rating": 0.183,
+    "size_mb": 0.34,
+    "log_price": -0.124,
+    "android": 0.026,
+    "days_since_update": -0.192,
+    "n_genres": 0.089
+   },
+   "rating": {
+    "log_installs": 0.084,
+    "log_reviews": 0.183,
+    "rating": 1.0,
+    "size_mb": 0.063,
+    "log_price": 0.023,
+    "android": 0.048,
+    "days_since_update": -0.13,
+    "n_genres": 0.045
+   },
+   "size_mb": {
+    "log_installs": 0.299,
+    "log_reviews": 0.34,
+    "rating": 0.063,
+    "size_mb": 1.0,
+    "log_price": -0.02,
+    "android": 0.144,
+    "days_since_update": -0.219,
+    "n_genres": 0.188
+   },
+   "log_price": {
+    "log_installs": -0.195,
+    "log_reviews": -0.124,
+    "rating": 0.023,
+    "size_mb": -0.02,
+    "log_price": 1.0,
+    "android": -0.084,
+    "days_since_update": 0.126,
+    "n_genres": 0.054
+   },
+   "android": {
+    "log_installs": 0.029,
+    "log_reviews": 0.026,
+    "rating": 0.048,
+    "size_mb": 0.144,
+    "log_price": -0.084,
+    "android": 1.0,
+    "days_since_update": -0.541,
+    "n_genres": 0.008
+   },
+   "days_since_update": {
+    "log_installs": -0.182,
+    "log_reviews": -0.192,
+    "rating": -0.13,
+    "size_mb": -0.219,
+    "log_price": 0.126,
+    "android": -0.541,
+    "days_since_update": 1.0,
+    "n_genres": -0.019
+   },
+   "n_genres": {
+    "log_installs": 0.098,
+    "log_reviews": 0.089,
+    "rating": 0.045,
+    "size_mb": 0.188,
+    "log_price": 0.054,
+    "android": 0.008,
+    "days_since_update": -0.019,
+    "n_genres": 1.0
+   }
+  },
+  "free_paid": {
+   "Free": {
+    "apps": 8905,
+    "median_installs": 100000.0,
+    "success_rate": 0.379,
+    "mean_rating": 4.166
+   },
+   "Paid": {
+    "apps": 754,
+    "median_installs": 1000.0,
+    "success_rate": 0.029,
+    "mean_rating": 4.262
+   }
+  },
+  "sentiment": {
+   "AUTO_AND_VEHICLES": {
+    "reviews": 289,
+    "polarity": 0.349,
+    "negative_share": 0.059
+   },
+   "PARENTING": {
+    "reviews": 260,
+    "polarity": 0.319,
+    "negative_share": 0.088
+   },
+   "HEALTH_AND_FITNESS": {
+    "reviews": 2249,
+    "polarity": 0.291,
+    "negative_share": 0.114
+   },
+   "EDUCATION": {
+    "reviews": 524,
+    "polarity": 0.297,
+    "negative_share": 0.122
+   },
+   "ART_AND_DESIGN": {
+    "reviews": 338,
+    "polarity": 0.245,
+    "negative_share": 0.139
+   },
+   "WEATHER": {
+    "reviews": 201,
+    "polarity": 0.295,
+    "negative_share": 0.139
+   },
+   "FOOD_AND_DRINK": {
+    "reviews": 638,
+    "polarity": 0.267,
+    "negative_share": 0.144
+   },
+   "PERSONALIZATION": {
+    "reviews": 1003,
+    "polarity": 0.278,
+    "negative_share": 0.146
+   },
+   "BOOKS_AND_REFERENCE": {
+    "reviews": 651,
+    "polarity": 0.248,
+    "negative_share": 0.146
+   },
+   "LIBRARIES_AND_DEMO": {
+    "reviews": 333,
+    "polarity": 0.241,
+    "negative_share": 0.153
+   },
+   "BUSINESS": {
+    "reviews": 1082,
+    "polarity": 0.232,
+    "negative_share": 0.156
+   },
+   "MEDICAL": {
+    "reviews": 1400,
+    "polarity": 0.224,
+    "negative_share": 0.159
+   },
+   "HOUSE_AND_HOME": {
+    "reviews": 511,
+    "polarity": 0.236,
+    "negative_share": 0.17
+   },
+   "TOOLS": {
+    "reviews": 1451,
+    "polarity": 0.214,
+    "negative_share": 0.176
+   },
+   "LIFESTYLE": {
+    "reviews": 954,
+    "polarity": 0.216,
+    "negative_share": 0.177
+   },
+   "PRODUCTIVITY": {
+    "reviews": 1463,
+    "polarity": 0.184,
+    "negative_share": 0.184
+   },
+   "BEAUTY": {
+    "reviews": 338,
+    "polarity": 0.193,
+    "negative_share": 0.192
+   },
+   "SHOPPING": {
+    "reviews": 898,
+    "polarity": 0.197,
+    "negative_share": 0.197
+   },
+   "PHOTOGRAPHY": {
+    "reviews": 1176,
+    "polarity": 0.223,
+    "negative_share": 0.2
+   },
+   "COMMUNICATION": {
+    "reviews": 1024,
+    "polarity": 0.177,
+    "negative_share": 0.202
+   },
+   "DATING": {
+    "reviews": 1715,
+    "polarity": 0.179,
+    "negative_share": 0.21
+   },
+   "TRAVEL_AND_LOCAL": {
+    "reviews": 1692,
+    "polarity": 0.195,
+    "negative_share": 0.217
+   },
+   "FINANCE": {
+    "reviews": 1435,
+    "polarity": 0.171,
+    "negative_share": 0.223
+   },
+   "SPORTS": {
+    "reviews": 1479,
+    "polarity": 0.193,
+    "negative_share": 0.228
+   },
+   "ENTERTAINMENT": {
+    "reviews": 1094,
+    "polarity": 0.129,
+    "negative_share": 0.247
+   },
+   "VIDEO_PLAYERS": {
+    "reviews": 331,
+    "polarity": 0.144,
+    "negative_share": 0.251
+   },
+   "FAMILY": {
+    "reviews": 3277,
+    "polarity": 0.136,
+    "negative_share": 0.256
+   },
+   "NEWS_AND_MAGAZINES": {
+    "reviews": 1040,
+    "polarity": 0.128,
+    "negative_share": 0.265
+   },
+   "SOCIAL": {
+    "reviews": 741,
+    "polarity": 0.109,
+    "negative_share": 0.282
+   },
+   "GAME": {
+    "reviews": 5947,
+    "polarity": 0.062,
+    "negative_share": 0.373
+   }
+  },
+  "then_now": {
+   "categories_compared": 30,
+   "mean_rating_2018": 4.173,
+   "mean_rating_2026": 4.348,
+   "paid_share_2018": 0.078,
+   "paid_share_2026": 0.022,
+   "rating_up_categories": 25
+  },
+  "then_now_table": {
+   "GAME": {
+    "mean_rating": 4.244,
+    "rating_2026": 4.444,
+    "paid_share": 0.087,
+    "paid_2026": 0.022,
+    "apps_2026": 184
+   },
+   "TOOLS": {
+    "mean_rating": 4.04,
+    "rating_2026": 4.282,
+    "paid_share": 0.094,
+    "paid_2026": 0.03,
+    "apps_2026": 67
+   },
+   "BUSINESS": {
+    "mean_rating": 4.098,
+    "rating_2026": 4.327,
+    "paid_share": 0.029,
+    "paid_2026": 0.0,
+    "apps_2026": 68
+   },
+   "MEDICAL": {
+    "mean_rating": 4.166,
+    "rating_2026": 4.417,
+    "paid_share": 0.208,
+    "paid_2026": 0.0,
+    "apps_2026": 46
+   },
+   "PERSONALIZATION": {
+    "mean_rating": 4.332,
+    "rating_2026": 4.426,
+    "paid_share": 0.215,
+    "paid_2026": 0.061,
+    "apps_2026": 49
+   },
+   "PRODUCTIVITY": {
+    "mean_rating": 4.183,
+    "rating_2026": 4.412,
+    "paid_share": 0.075,
+    "paid_2026": 0.009,
+    "apps_2026": 109
+   },
+   "LIFESTYLE": {
+    "mean_rating": 4.093,
+    "rating_2026": 4.401,
+    "paid_share": 0.051,
+    "paid_2026": 0.0,
+    "apps_2026": 70
+   },
+   "FINANCE": {
+    "mean_rating": 4.116,
+    "rating_2026": 4.464,
+    "paid_share": 0.049,
+    "paid_2026": 0.016,
+    "apps_2026": 62
+   },
+   "SPORTS": {
+    "mean_rating": 4.216,
+    "rating_2026": 4.309,
+    "paid_share": 0.074,
+    "paid_2026": 0.0,
+    "apps_2026": 44
+   },
+   "COMMUNICATION": {
+    "mean_rating": 4.121,
+    "rating_2026": 4.146,
+    "paid_share": 0.086,
+    "paid_2026": 0.0,
+    "apps_2026": 31
+   },
+   "HEALTH_AND_FITNESS": {
+    "mean_rating": 4.243,
+    "rating_2026": 4.496,
+    "paid_share": 0.052,
+    "paid_2026": 0.034,
+    "apps_2026": 59
+   },
+   "PHOTOGRAPHY": {
+    "mean_rating": 4.156,
+    "rating_2026": 4.286,
+    "paid_share": 0.068,
+    "paid_2026": 0.019,
+    "apps_2026": 53
+   },
+   "NEWS_AND_MAGAZINES": {
+    "mean_rating": 4.122,
+    "rating_2026": 4.292,
+    "paid_share": 0.008,
+    "paid_2026": 0.0,
+    "apps_2026": 47
+   },
+   "SOCIAL": {
+    "mean_rating": 4.247,
+    "rating_2026": 4.075,
+    "paid_share": 0.013,
+    "paid_2026": 0.0,
+    "apps_2026": 52
+   },
+   "BOOKS_AND_REFERENCE": {
+    "mean_rating": 4.345,
+    "rating_2026": 4.353,
+    "paid_share": 0.126,
+    "paid_2026": 0.16,
+    "apps_2026": 50
+   },
+   "TRAVEL_AND_LOCAL": {
+    "mean_rating": 4.07,
+    "rating_2026": 4.397,
+    "paid_share": 0.055,
+    "paid_2026": 0.042,
+    "apps_2026": 48
+   },
+   "SHOPPING": {
+    "mean_rating": 4.231,
+    "rating_2026": 4.539,
+    "paid_share": 0.01,
+    "paid_2026": 0.0,
+    "apps_2026": 60
+   },
+   "DATING": {
+    "mean_rating": 3.98,
+    "rating_2026": 3.894,
+    "paid_share": 0.029,
+    "paid_2026": 0.0,
+    "apps_2026": 29
+   },
+   "VIDEO_PLAYERS": {
+    "mean_rating": 4.045,
+    "rating_2026": 4.33,
+    "paid_share": 0.024,
+    "paid_2026": 0.067,
+    "apps_2026": 45
+   },
+   "MAPS_AND_NAVIGATION": {
+    "mean_rating": 4.036,
+    "rating_2026": 4.095,
+    "paid_share": 0.038,
+    "paid_2026": 0.0,
+    "apps_2026": 39
+   },
+   "FOOD_AND_DRINK": {
+    "mean_rating": 4.171,
+    "rating_2026": 4.534,
+    "paid_share": 0.018,
+    "paid_2026": 0.0,
+    "apps_2026": 53
+   },
+   "EDUCATION": {
+    "mean_rating": 4.351,
+    "rating_2026": 4.489,
+    "paid_share": 0.019,
+    "paid_2026": 0.0,
+    "apps_2026": 73
+   },
+   "ENTERTAINMENT": {
+    "mean_rating": 4.129,
+    "rating_2026": 4.149,
+    "paid_share": 0.023,
+    "paid_2026": 0.0,
+    "apps_2026": 50
+   },
+   "AUTO_AND_VEHICLES": {
+    "mean_rating": 4.19,
+    "rating_2026": 4.317,
+    "paid_share": 0.035,
+    "paid_2026": 0.0,
+    "apps_2026": 28
+   },
+   "WEATHER": {
+    "mean_rating": 4.243,
+    "rating_2026": 4.424,
+    "paid_share": 0.101,
+    "paid_2026": 0.118,
+    "apps_2026": 34
+   },
+   "EVENTS": {
+    "mean_rating": 4.436,
+    "rating_2026": 4.166,
+    "paid_share": 0.016,
+    "paid_2026": 0.0,
+    "apps_2026": 24
+   },
+   "ART_AND_DESIGN": {
+    "mean_rating": 4.359,
+    "rating_2026": 4.356,
+    "paid_share": 0.049,
+    "paid_2026": 0.023,
+    "apps_2026": 44
+   },
+   "PARENTING": {
+    "mean_rating": 4.3,
+    "rating_2026": 4.59,
+    "paid_share": 0.033,
+    "paid_2026": 0.0,
+    "apps_2026": 40
+   },
+   "COMICS": {
+    "mean_rating": 4.181,
+    "rating_2026": 4.208,
+    "paid_share": 0.0,
+    "paid_2026": 0.054,
+    "apps_2026": 37
+   },
+   "BEAUTY": {
+    "mean_rating": 4.279,
+    "rating_2026": 4.091,
+    "paid_share": 0.0,
+    "paid_2026": 0.0,
+    "apps_2026": 34
+   }
+  }
+ },
+ "predict": {
+  "split_sizes": {
+   "train": 5795,
+   "val": 1932,
+   "test": 1932
+  },
+  "poly_val_rmse": {
+   "1": 0.5542762929281525,
+   "2": 0.5303639987848838,
+   "3": 0.5270954236442951,
+   "4": 0.5270786240852947,
+   "5": 0.5270325080133007
+  },
+  "poly_degree": 5,
+  "simple_linear": {
+   "intercept": 1.6371771841633769,
+   "slope": 1.0094390420186208
+  },
+  "knn_val_rmse": {
+   "5": 1.7422673380707976,
+   "10": 1.689516219187083,
+   "25": 1.64934809458074,
+   "50": 1.6624375896835502,
+   "100": 1.6914551940739848,
+   "200": 1.7215288249799146
+  },
+  "knn_k": 25,
+  "tree_val_rmse": {
+   "2": 1.6635589791705143,
+   "3": 1.631056569078837,
+   "4": 1.6042733100894333,
+   "5": 1.5874393613223388,
+   "6": 1.587144748330624,
+   "8": 1.5875636666388702,
+   "10": 1.588783018755215,
+   "12": 1.6089921442018997
+  },
+  "tree_depth": 6,
+  "table": {
+   "Multiple linear: reviews, rating, price (after launch)": {
+    "rmse": 0.4928,
+    "mae": 0.3803,
+    "r2": 0.9348,
+    "group": "after launch (leaked)"
+   },
+   "Polynomial (degree 5): reviews (after launch)": {
+    "rmse": 0.5177,
+    "mae": 0.4015,
+    "r2": 0.9281,
+    "group": "after launch (leaked)"
+   },
+   "Simple linear: reviews (after launch)": {
+    "rmse": 0.5494,
+    "mae": 0.4341,
+    "r2": 0.919,
+    "group": "after launch (leaked)"
+   },
+   "Multiple linear: pre-launch + neighbourhood": {
+    "rmse": 1.5228,
+    "mae": 1.2278,
+    "r2": 0.3777,
+    "group": "before launch"
+   },
+   "Decision tree (depth 6): pre-launch + neighbourhood": {
+    "rmse": 1.5639,
+    "mae": 1.2479,
+    "r2": 0.3437,
+    "group": "before launch"
+   },
+   "KNN on names (K = 25)": {
+    "rmse": 1.6411,
+    "mae": 1.3396,
+    "r2": 0.2773,
+    "group": "before launch"
+   },
+   "Multiple linear: category, content, price (before launch)": {
+    "rmse": 1.7589,
+    "mae": 1.4624,
+    "r2": 0.1698,
+    "group": "before launch"
+   },
+   "Category mean": {
+    "rmse": 1.8209,
+    "mae": 1.5179,
+    "r2": 0.1103,
+    "group": "before launch"
+   },
+   "Baseline: training mean": {
+    "rmse": 1.9327,
+    "mae": 1.637,
+    "r2": -0.0023,
+    "group": "before launch"
+   }
+  },
+  "best_honest": {
+   "model": "Multiple linear: pre-launch + neighbourhood",
+   "rmse": 1.522846729528655,
+   "mae": 1.227807182133744,
+   "r2": 0.3777153594625897,
+   "rmse_cut_vs_baseline_pct": 21.2
+  },
+  "best_leaked": {
+   "model": "Multiple linear: reviews, rating, price (after launch)",
+   "rmse": 0.49283456180382074,
+   "mae": 0.3803460925715709,
+   "r2": 0.9348253053424902
+  },
+  "tree_importance": {
+   "nb_demand": 0.7659,
+   "paid": 0.116,
+   "log_price": 0.0331,
+   "category_BUSINESS": 0.0208,
+   "category_MEDICAL": 0.0138,
+   "category_GAME": 0.0131,
+   "nb_crowding": 0.0129,
+   "nb_rating": 0.0099,
+   "content_Everyone": 0.0088,
+   "content_Teen": 0.0045,
+   "category_FAMILY": 0.0013,
+   "category_ART_AND_DESIGN": 0.0
+  }
+ },
+ "classify": {
+  "category_grid": [
+   {
+    "terms": "word",
+    "weights": "none",
+    "C": 1,
+    "val_top1": 0.4555,
+    "val_top3": 0.6713,
+    "val_family_share": 0.4979
+   },
+   {
+    "terms": "word",
+    "weights": "none",
+    "C": 5,
+    "val_top1": 0.4845,
+    "val_top3": 0.7029,
+    "val_family_share": 0.3587
+   },
+   {
+    "terms": "word",
+    "weights": "none",
+    "C": 20,
+    "val_top1": 0.4638,
+    "val_top3": 0.6796,
+    "val_family_share": 0.323
+   },
+   {
+    "terms": "word",
+    "weights": "balanced",
+    "C": 1,
+    "val_top1": 0.4224,
+    "val_top3": 0.6517,
+    "val_family_share": 0.0502
+   },
+   {
+    "terms": "word",
+    "weights": "balanced",
+    "C": 5,
+    "val_top1": 0.4462,
+    "val_top3": 0.6682,
+    "val_family_share": 0.1718
+   },
+   {
+    "terms": "word",
+    "weights": "balanced",
+    "C": 20,
+    "val_top1": 0.4482,
+    "val_top3": 0.663,
+    "val_family_share": 0.1957
+   },
+   {
+    "terms": "char_wb",
+    "weights": "none",
+    "C": 1,
+    "val_top1": 0.4586,
+    "val_top3": 0.6827,
+    "val_family_share": 0.5248
+   },
+   {
+    "terms": "char_wb",
+    "weights": "none",
+    "C": 5,
+    "val_top1": 0.4979,
+    "val_top3": 0.7189,
+    "val_family_share": 0.339
+   },
+   {
+    "terms": "char_wb",
+    "weights": "none",
+    "C": 20,
+    "val_top1": 0.4933,
+    "val_top3": 0.7065,
+    "val_family_share": 0.2883
+   },
+   {
+    "terms": "char_wb",
+    "weights": "balanced",
+    "C": 1,
+    "val_top1": 0.4369,
+    "val_top3": 0.6605,
+    "val_family_share": 0.0559
+   },
+   {
+    "terms": "char_wb",
+    "weights": "balanced",
+    "C": 5,
+    "val_top1": 0.4612,
+    "val_top3": 0.6977,
+    "val_family_share": 0.1061
+   },
+   {
+    "terms": "char_wb",
+    "weights": "balanced",
+    "C": 20,
+    "val_top1": 0.471,
+    "val_top3": 0.7013,
+    "val_family_share": 0.1589
+   }
+  ],
+  "category_C": 20.0,
+  "category_test": {
+   "majority_class": "FAMILY",
+   "majority_top1": 0.19409937888198758,
+   "majority_top3": 0.3778467908902691,
+   "balanced_top1": 0.4824016563146998,
+   "balanced_top3": 0.703416149068323,
+   "unbalanced_top1": 0.489648033126294,
+   "unbalanced_top3": 0.7184265010351967,
+   "balanced_family_share": 0.15165631469979296,
+   "unbalanced_family_share": 0.2908902691511387,
+   "true_family_share": 0.19409937888198758,
+   "apps_2026": 1647,
+   "balanced_top1_2026": 0.6217364905889496,
+   "balanced_top3_2026": 0.7990285367334548,
+   "majority_top1_2026": 0.0
+  },
+  "success_knn_val_auc": {
+   "5": 0.765839331302271,
+   "15": 0.7935449068349614,
+   "25": 0.7943995522237584,
+   "51": 0.7993617102642042,
+   "101": 0.7958538979362197
+  },
+  "success_tree_val_auc": {
+   "2": 0.7499133766199152,
+   "3": 0.77008416663673,
+   "4": 0.776191839208465,
+   "5": 0.7826871441633226,
+   "6": 0.7830481231987263,
+   "8": 0.7866897816859053,
+   "10": 0.775238112896628
+  },
+  "success_table": {
+   "Logistic: + neighbourhood (engine)": {
+    "auc": 0.8261,
+    "accuracy": 0.7521,
+    "precision": 0.7058,
+    "recall": 0.5644,
+    "f1": 0.6272
+   },
+   "KNN (K = 51): + neighbourhood": {
+    "auc": 0.8175,
+    "accuracy": 0.7505,
+    "precision": 0.6953,
+    "recall": 0.5784,
+    "f1": 0.6315
+   },
+   "Decision tree (depth 8): + neighbourhood": {
+    "auc": 0.7957,
+    "accuracy": 0.7308,
+    "precision": 0.6672,
+    "recall": 0.542,
+    "f1": 0.5981
+   },
+   "Logistic: category, content, price": {
+    "auc": 0.7276,
+    "accuracy": 0.6796,
+    "precision": 0.626,
+    "recall": 0.3305,
+    "f1": 0.4326
+   },
+   "Always 'not successful'": {
+    "auc": 0.5,
+    "accuracy": 0.6304,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0
+   }
+  },
+  "success_rate_test": 0.3695652173913043,
+  "engine_weights": {
+   "category_ART_AND_DESIGN": -0.8816,
+   "category_AUTO_AND_VEHICLES": -0.7914,
+   "category_BEAUTY": -1.3817,
+   "category_BOOKS_AND_REFERENCE": -0.3125,
+   "category_BUSINESS": -0.6024,
+   "category_COMICS": -0.5334,
+   "category_COMMUNICATION": 0.4002,
+   "category_DATING": -1.1975,
+   "category_EDUCATION": 1.146,
+   "category_ENTERTAINMENT": 1.8831,
+   "category_EVENTS": -0.7582,
+   "category_FAMILY": -0.2183,
+   "category_FINANCE": 0.041,
+   "category_FOOD_AND_DRINK": 0.0222,
+   "category_GAME": 0.5397,
+   "category_HEALTH_AND_FITNESS": 0.2129,
+   "category_HOUSE_AND_HOME": 0.2646,
+   "category_LIBRARIES_AND_DEMO": -0.9795,
+   "category_LIFESTYLE": -0.2874,
+   "category_MAPS_AND_NAVIGATION": 0.5197,
+   "category_MEDICAL": -1.4199,
+   "category_NEWS_AND_MAGAZINES": 0.174,
+   "category_PARENTING": -0.2881,
+   "category_PERSONALIZATION": 0.2893,
+   "category_PHOTOGRAPHY": 0.5018,
+   "category_PRODUCTIVITY": 0.3535,
+   "category_SHOPPING": 0.6661,
+   "category_SOCIAL": 0.3005,
+   "category_SPORTS": 0.2466,
+   "category_TOOLS": 0.0657,
+   "category_TRAVEL_AND_LOCAL": 0.3754,
+   "category_VIDEO_PLAYERS": 0.8202,
+   "category_WEATHER": 0.3284,
+   "content_Adults only 18+": -0.1533,
+   "content_Everyone": -0.4074,
+   "content_Everyone 10+": 0.3179,
+   "content_Mature 17+": -0.1446,
+   "content_Teen": -0.0301,
+   "content_Unrated": -0.0834,
+   "nb_demand": 1.0939,
+   "nb_crowding": -0.0322,
+   "nb_rating": 0.0648,
+   "log_price": -0.4984,
+   "paid": -0.4706
+  }
+ },
+ "cluster": {
+  "silhouette": {
+   "2": 0.19254375490679446,
+   "3": 0.23892037403082747,
+   "4": 0.22776072849893003,
+   "5": 0.21593580791227324,
+   "6": 0.22616967158091802,
+   "7": 0.24595077177995384,
+   "8": 0.260677385630078,
+   "9": 0.25016301664197915,
+   "10": 0.25969177208980787
+  },
+  "k": 3,
+  "ari_kmeans_agglomerative": 0.6927309765279088,
+  "silhouette_agglomerative": 0.24014326730815153,
+  "profiles": {
+   "high demand, mid-sized": {
+    "apps": 196.5,
+    "success_rate": 0.4916,
+    "median_installs": 572727.2727,
+    "mean_rating": 4.1854,
+    "paid_share": 0.0734,
+    "top10_share": 0.6219,
+    "genres": 22
+   },
+   "low demand, crowded": {
+    "apps": 453.0,
+    "success_rate": 0.2229,
+    "median_installs": 16888.8889,
+    "mean_rating": 4.1348,
+    "paid_share": 0.0884,
+    "top10_share": 0.5388,
+    "genres": 9
+   },
+   "low demand, uncrowded": {
+    "apps": 78.625,
+    "success_rate": 0.2944,
+    "median_installs": 162875.0,
+    "mean_rating": 4.2379,
+    "paid_share": 0.0646,
+    "top10_share": 0.8739,
+    "genres": 16
+   }
+  },
+  "members": {
+   "high demand, mid-sized": [
+    "Action",
+    "Arcade",
+    "Casual",
+    "Communication",
+    "Educational",
+    "Food & Drink",
+    "Health & Fitness",
+    "House & Home",
+    "Maps & Navigation",
+    "Photography",
+    "Productivity",
+    "Puzzle",
+    "Racing",
+    "Role Playing",
+    "Shopping",
+    "Simulation",
+    "Social",
+    "Sports",
+    "Strategy",
+    "Travel & Local",
+    "Video Players & Editors",
+    "Weather"
+   ],
+   "low demand, crowded": [
+    "Business",
+    "Dating",
+    "Education",
+    "Entertainment",
+    "Finance",
+    "Lifestyle",
+    "Medical",
+    "Personalization",
+    "Tools"
+   ],
+   "low demand, uncrowded": [
+    "Adventure",
+    "Art & Design",
+    "Auto & Vehicles",
+    "Beauty",
+    "Board",
+    "Books & Reference",
+    "Card",
+    "Casino",
+    "Comics",
+    "Events",
+    "Libraries & Demo",
+    "Music",
+    "News & Magazines",
+    "Parenting",
+    "Trivia",
+    "Word"
+   ]
+  },
+  "genre_segment": {
+   "Action": "high demand, mid-sized",
+   "Adventure": "low demand, uncrowded",
+   "Arcade": "high demand, mid-sized",
+   "Art & Design": "low demand, uncrowded",
+   "Auto & Vehicles": "low demand, uncrowded",
+   "Beauty": "low demand, uncrowded",
+   "Board": "low demand, uncrowded",
+   "Books & Reference": "low demand, uncrowded",
+   "Business": "low demand, crowded",
+   "Card": "low demand, uncrowded",
+   "Casino": "low demand, uncrowded",
+   "Casual": "high demand, mid-sized",
+   "Comics": "low demand, uncrowded",
+   "Communication": "high demand, mid-sized",
+   "Dating": "low demand, crowded",
+   "Education": "low demand, crowded",
+   "Educational": "high demand, mid-sized",
+   "Entertainment": "low demand, crowded",
+   "Events": "low demand, uncrowded",
+   "Finance": "low demand, crowded",
+   "Food & Drink": "high demand, mid-sized",
+   "Health & Fitness": "high demand, mid-sized",
+   "House & Home": "high demand, mid-sized",
+   "Libraries & Demo": "low demand, uncrowded",
+   "Lifestyle": "low demand, crowded",
+   "Maps & Navigation": "high demand, mid-sized",
+   "Medical": "low demand, crowded",
+   "Music": "low demand, uncrowded",
+   "News & Magazines": "low demand, uncrowded",
+   "Parenting": "low demand, uncrowded",
+   "Personalization": "low demand, crowded",
+   "Photography": "high demand, mid-sized",
+   "Productivity": "high demand, mid-sized",
+   "Puzzle": "high demand, mid-sized",
+   "Racing": "high demand, mid-sized",
+   "Role Playing": "high demand, mid-sized",
+   "Shopping": "high demand, mid-sized",
+   "Simulation": "high demand, mid-sized",
+   "Social": "high demand, mid-sized",
+   "Sports": "high demand, mid-sized",
+   "Strategy": "high demand, mid-sized",
+   "Tools": "low demand, crowded",
+   "Travel & Local": "high demand, mid-sized",
+   "Trivia": "low demand, uncrowded",
+   "Video Players & Editors": "high demand, mid-sized",
+   "Weather": "high demand, mid-sized",
+   "Word": "low demand, uncrowded"
+  },
+  "pca_explained": [
+   0.329,
+   0.305
+  ],
+  "top_left": [
+   {
+    "genre": "Racing",
+    "category": "GAME",
+    "apps": 108,
+    "success_rate": 0.694,
+    "mean_rating": 4.175,
+    "segment": "high demand, mid-sized"
+   },
+   {
+    "genre": "Word",
+    "category": "GAME",
+    "apps": 23,
+    "success_rate": 0.652,
+    "mean_rating": 4.318,
+    "segment": "low demand, uncrowded"
+   },
+   {
+    "genre": "Strategy",
+    "category": "FAMILY",
+    "apps": 99,
+    "success_rate": 0.606,
+    "mean_rating": 4.227,
+    "segment": "high demand, mid-sized"
+   },
+   {
+    "genre": "Weather",
+    "category": "WEATHER",
+    "apps": 79,
+    "success_rate": 0.532,
+    "mean_rating": 4.243,
+    "segment": "high demand, mid-sized"
+   },
+   {
+    "genre": "Role Playing",
+    "category": "FAMILY",
+    "apps": 115,
+    "success_rate": 0.53,
+    "mean_rating": 4.272,
+    "segment": "high demand, mid-sized"
+   },
+   {
+    "genre": "Music",
+    "category": "GAME",
+    "apps": 22,
+    "success_rate": 0.455,
+    "mean_rating": 4.219,
+    "segment": "low demand, uncrowded"
+   },
+   {
+    "genre": "Puzzle",
+    "category": "FAMILY",
+    "apps": 142,
+    "success_rate": 0.444,
+    "mean_rating": 4.371,
+    "segment": "high demand, mid-sized"
+   },
+   {
+    "genre": "Food & Drink",
+    "category": "FOOD_AND_DRINK",
+    "apps": 112,
+    "success_rate": 0.438,
+    "mean_rating": 4.171,
+    "segment": "high demand, mid-sized"
+   },
+   {
+    "genre": "Maps & Navigation",
+    "category": "MAPS_AND_NAVIGATION",
+    "apps": 131,
+    "success_rate": 0.412,
+    "mean_rating": 4.036,
+    "segment": "high demand, mid-sized"
+   },
+   {
+    "genre": "Educational",
+    "category": "FAMILY",
+    "apps": 102,
+    "success_rate": 0.412,
+    "mean_rating": 4.1,
+    "segment": "high demand, mid-sized"
+   },
+   {
+    "genre": "House & Home",
+    "category": "HOUSE_AND_HOME",
+    "apps": 73,
+    "success_rate": 0.411,
+    "mean_rating": 4.141,
+    "segment": "high demand, mid-sized"
+   },
+   {
+    "genre": "Casino",
+    "category": "GAME",
+    "apps": 39,
+    "success_rate": 0.41,
+    "mean_rating": 4.286,
+    "segment": "low demand, uncrowded"
+   },
+   {
+    "genre": "Adventure",
+    "category": "GAME",
+    "apps": 80,
+    "success_rate": 0.4,
+    "mean_rating": 4.191,
+    "segment": "low demand, uncrowded"
+   }
+  ],
+  "bottom_right": [
+   {
+    "genre": "Medical",
+    "category": "MEDICAL",
+    "apps": 395,
+    "success_rate": 0.046,
+    "mean_rating": 4.166,
+    "segment": "low demand, crowded"
+   },
+   {
+    "genre": "Business",
+    "category": "BUSINESS",
+    "apps": 420,
+    "success_rate": 0.164,
+    "mean_rating": 4.098,
+    "segment": "low demand, crowded"
+   },
+   {
+    "genre": "Education",
+    "category": "FAMILY",
+    "apps": 580,
+    "success_rate": 0.179,
+    "mean_rating": 4.294,
+    "segment": "low demand, crowded"
+   },
+   {
+    "genre": "Dating",
+    "category": "DATING",
+    "apps": 170,
+    "success_rate": 0.194,
+    "mean_rating": 3.98,
+    "segment": "low demand, crowded"
+   },
+   {
+    "genre": "Lifestyle",
+    "category": "LIFESTYLE",
+    "apps": 370,
+    "success_rate": 0.227,
+    "mean_rating": 4.094,
+    "segment": "low demand, crowded"
+   },
+   {
+    "genre": "Books & Reference",
+    "category": "BOOKS_AND_REFERENCE",
+    "apps": 225,
+    "success_rate": 0.236,
+    "mean_rating": 4.343,
+    "segment": "low demand, uncrowded"
+   },
+   {
+    "genre": "Finance",
+    "category": "FINANCE",
+    "apps": 345,
+    "success_rate": 0.27,
+    "mean_rating": 4.116,
+    "segment": "low demand, crowded"
+   },
+   {
+    "genre": "Personalization",
+    "category": "PERSONALIZATION",
+    "apps": 376,
+    "success_rate": 0.293,
+    "mean_rating": 4.332,
+    "segment": "low demand, crowded"
+   },
+   {
+    "genre": "Entertainment",
+    "category": "FAMILY",
+    "apps": 592,
+    "success_rate": 0.302,
+    "mean_rating": 4.093,
+    "segment": "low demand, crowded"
+   },
+   {
+    "genre": "News & Magazines",
+    "category": "NEWS_AND_MAGAZINES",
+    "apps": 254,
+    "success_rate": 0.331,
+    "mean_rating": 4.122,
+    "segment": "low demand, uncrowded"
+   },
+   {
+    "genre": "Tools",
+    "category": "TOOLS",
+    "apps": 829,
+    "success_rate": 0.332,
+    "mean_rating": 4.04,
+    "segment": "low demand, crowded"
+   },
+   {
+    "genre": "Sports",
+    "category": "SPORTS",
+    "apps": 335,
+    "success_rate": 0.373,
+    "mean_rating": 4.225,
+    "segment": "high demand, mid-sized"
+   },
+   {
+    "genre": "Health & Fitness",
+    "category": "HEALTH_AND_FITNESS",
+    "apps": 290,
+    "success_rate": 0.39,
+    "mean_rating": 4.243,
+    "segment": "high demand, mid-sized"
+   }
+  ]
+ },
+ "prove": {
+  "tests": {
+   "H1 paid vs free rating": {
+    "p": 8.108375019564798e-11,
+    "p_holm": 2.4325125058694394e-10,
+    "reject_H0": true,
+    "effect": "median 4.40 vs 4.30"
+   },
+   "H2 rating across categories": {
+    "p": 2.543710324222461e-33,
+    "p_holm": 1.2718551621112305e-32,
+    "reject_H0": true,
+    "effect": "H = 238, ε² = 0.025"
+   },
+   "H3 success vs content rating": {
+    "p": 2.871190844883496e-31,
+    "p_holm": 1.1484763379533983e-30,
+    "reject_H0": true,
+    "effect": "Cramér's V = 0.123"
+   },
+   "H4 recent update vs installs": {
+    "p": 2.28323841122088e-131,
+    "p_holm": 1.369943046732528e-130,
+    "reject_H0": true,
+    "effect": "median installs 500,000 vs 10,000"
+   },
+   "H5 review polarity vs success": {
+    "p": 4.7284315125892165e-07,
+    "p_holm": 9.456863025178433e-07,
+    "reject_H0": true,
+    "effect": "mean 0.184 vs 0.246 (726 apps)"
+   },
+   "H6 size vs installs": {
+    "p": 2.1573144697088607e-187,
+    "p_holm": 1.5101201287962025e-186,
+    "reject_H0": true,
+    "effect": "ρ = 0.310"
+   },
+   "H7 rating 2018 vs 2026": {
+    "p": 0.00018860027194023132,
+    "p_holm": 0.00018860027194023132,
+    "reject_H0": true,
+    "effect": "25 of 30 categories higher in 2026"
+   }
+  },
+  "bootstrap": {
+   "paid_minus_free_mean_rating": {
+    "estimate": 0.09590291163595754,
+    "ci95": [
+     0.048,
+     0.14
+    ]
+   },
+   "recent_minus_old_success_rate": {
+    "estimate": 0.2476801346439103,
+    "ci95": [
+     0.229,
+     0.266
+    ]
+   }
+  },
+  "score_comparison": {
+   "neighbours' installs (demand)": {
+    "2018 held-out apps": 0.7776,
+    "2026 apps released after the snapshot": 0.6516
+   },
+   "low crowding (competition)": {
+    "2018 held-out apps": 0.4253,
+    "2026 apps released after the snapshot": 0.415
+   },
+   "low neighbour rating (room to do better)": {
+    "2018 held-out apps": 0.4432,
+    "2026 apps released after the snapshot": 0.474
+   },
+   "learned score (engine)": {
+    "2018 held-out apps": 0.8329,
+    "2026 apps released after the snapshot": 0.7099
+   },
+   "hand-weighted opportunity score": {
+    "2018 held-out apps": 0.7976,
+    "2026 apps released after the snapshot": 0.6739
+   }
+  },
+  "score_validation": {
+   "2018 held-out apps": {
+    "apps": 1932.0,
+    "success_rate": 0.3696,
+    "auc_score": 0.8329,
+    "spearman_score_installs": 0.6255
+   },
+   "2026 apps released after the snapshot": {
+    "apps": 836.0,
+    "success_rate": 0.5024,
+    "auc_score": 0.7099,
+    "spearman_score_installs": 0.3981
+   }
+  },
+  "learned_weights": {
+   "nb_demand": 1.0987724433228625,
+   "nb_crowding": -0.03048028957151108,
+   "nb_rating": 0.05649231812184617
+  },
+  "verdict_bands": {
+   "2018 held-out apps": {
+    "success": [
+     0.041,
+     0.208,
+     0.452,
+     0.737
+    ],
+    "apps": [
+     466,
+     475,
+     471,
+     520
+    ],
+    "rises_every_band": true
+   },
+   "2026 apps released after the snapshot": {
+    "success": [
+     0.157,
+     0.376,
+     0.522,
+     0.706
+    ],
+    "apps": [
+     108,
+     194,
+     255,
+     279
+    ],
+    "rises_every_band": true
+   }
+  },
+  "fairness": {
+   "ART_AND_DESIGN": {
+    "apps": 12,
+    "actual": 0.1667,
+    "predicted": 0.2135,
+    "auc": null,
+    "calibration_gap": 0.0468
+   },
+   "AUTO_AND_VEHICLES": {
+    "apps": 17,
+    "actual": 0.2941,
+    "predicted": 0.163,
+    "auc": 0.5833,
+    "calibration_gap": -0.1311
+   },
+   "BEAUTY": {
+    "apps": 11,
+    "actual": 0.2727,
+    "predicted": 0.2514,
+    "auc": null,
+    "calibration_gap": -0.0213
+   },
+   "BOOKS_AND_REFERENCE": {
+    "apps": 45,
+    "actual": 0.1778,
+    "predicted": 0.2404,
+    "auc": 0.8649,
+    "calibration_gap": 0.0626
+   },
+   "BUSINESS": {
+    "apps": 84,
+    "actual": 0.1071,
+    "predicted": 0.1509,
+    "auc": 0.7496,
+    "calibration_gap": 0.0437
+   },
+   "COMICS": {
+    "apps": 11,
+    "actual": 0.3636,
+    "predicted": 0.2686,
+    "auc": null,
+    "calibration_gap": -0.0951
+   },
+   "COMMUNICATION": {
+    "apps": 63,
+    "actual": 0.5238,
+    "predicted": 0.4308,
+    "auc": 0.7808,
+    "calibration_gap": -0.093
+   },
+   "DATING": {
+    "apps": 34,
+    "actual": 0.1765,
+    "predicted": 0.2438,
+    "auc": 0.6429,
+    "calibration_gap": 0.0673
+   },
+   "EDUCATION": {
+    "apps": 21,
+    "actual": 0.4762,
+    "predicted": 0.561,
+    "auc": 0.9273,
+    "calibration_gap": 0.0848
+   },
+   "ENTERTAINMENT": {
+    "apps": 17,
+    "actual": 0.8235,
+    "predicted": 0.8509,
+    "auc": null,
+    "calibration_gap": 0.0274
+   },
+   "EVENTS": {
+    "apps": 13,
+    "actual": 0.0,
+    "predicted": 0.12,
+    "auc": null,
+    "calibration_gap": 0.12
+   },
+   "FAMILY": {
+    "apps": 375,
+    "actual": 0.3467,
+    "predicted": 0.3154,
+    "auc": 0.8106,
+    "calibration_gap": -0.0313
+   },
+   "FINANCE": {
+    "apps": 69,
+    "actual": 0.3043,
+    "predicted": 0.2928,
+    "auc": 0.748,
+    "calibration_gap": -0.0116
+   },
+   "FOOD_AND_DRINK": {
+    "apps": 22,
+    "actual": 0.5909,
+    "predicted": 0.4356,
+    "auc": 0.4957,
+    "calibration_gap": -0.1553
+   },
+   "GAME": {
+    "apps": 189,
+    "actual": 0.6772,
+    "predicted": 0.571,
+    "auc": 0.7273,
+    "calibration_gap": -0.1062
+   },
+   "HEALTH_AND_FITNESS": {
+    "apps": 57,
+    "actual": 0.5263,
+    "predicted": 0.3912,
+    "auc": 0.8457,
+    "calibration_gap": -0.1351
+   },
+   "HOUSE_AND_HOME": {
+    "apps": 15,
+    "actual": 0.2667,
+    "predicted": 0.3755,
+    "auc": null,
+    "calibration_gap": 0.1088
+   },
+   "LIBRARIES_AND_DEMO": {
+    "apps": 17,
+    "actual": 0.1176,
+    "predicted": 0.2163,
+    "auc": null,
+    "calibration_gap": 0.0986
+   },
+   "LIFESTYLE": {
+    "apps": 74,
+    "actual": 0.2027,
+    "predicted": 0.2552,
+    "auc": 0.8508,
+    "calibration_gap": 0.0525
+   },
+   "MAPS_AND_NAVIGATION": {
+    "apps": 26,
+    "actual": 0.3462,
+    "predicted": 0.3856,
+    "auc": 0.9346,
+    "calibration_gap": 0.0394
+   },
+   "MEDICAL": {
+    "apps": 79,
+    "actual": 0.0253,
+    "predicted": 0.0573,
+    "auc": null,
+    "calibration_gap": 0.032
+   },
+   "NEWS_AND_MAGAZINES": {
+    "apps": 51,
+    "actual": 0.3137,
+    "predicted": 0.3333,
+    "auc": 0.8839,
+    "calibration_gap": 0.0195
+   },
+   "PARENTING": {
+    "apps": 12,
+    "actual": 0.1667,
+    "predicted": 0.2296,
+    "auc": null,
+    "calibration_gap": 0.0629
+   },
+   "PERSONALIZATION": {
+    "apps": 75,
+    "actual": 0.28,
+    "predicted": 0.2654,
+    "auc": 0.7928,
+    "calibration_gap": -0.0146
+   },
+   "PHOTOGRAPHY": {
+    "apps": 56,
+    "actual": 0.5357,
+    "predicted": 0.5966,
+    "auc": 0.8397,
+    "calibration_gap": 0.0609
+   },
+   "PRODUCTIVITY": {
+    "apps": 75,
+    "actual": 0.3867,
+    "predicted": 0.4226,
+    "auc": 0.8868,
+    "calibration_gap": 0.0359
+   },
+   "SHOPPING": {
+    "apps": 40,
+    "actual": 0.5,
+    "predicted": 0.5422,
+    "auc": 0.775,
+    "calibration_gap": 0.0422
+   },
+   "SOCIAL": {
+    "apps": 48,
+    "actual": 0.3333,
+    "predicted": 0.428,
+    "auc": 0.748,
+    "calibration_gap": 0.0947
+   },
+   "SPORTS": {
+    "apps": 65,
+    "actual": 0.4,
+    "predicted": 0.361,
+    "auc": 0.7436,
+    "calibration_gap": -0.039
+   },
+   "TOOLS": {
+    "apps": 166,
+    "actual": 0.3916,
+    "predicted": 0.335,
+    "auc": 0.7741,
+    "calibration_gap": -0.0566
+   },
+   "TRAVEL_AND_LOCAL": {
+    "apps": 44,
+    "actual": 0.4091,
+    "predicted": 0.4311,
+    "auc": 0.8739,
+    "calibration_gap": 0.022
+   },
+   "VIDEO_PLAYERS": {
+    "apps": 33,
+    "actual": 0.3939,
+    "predicted": 0.487,
+    "auc": 0.6654,
+    "calibration_gap": 0.0931
+   },
+   "WEATHER": {
+    "apps": 16,
+    "actual": 0.625,
+    "predicted": 0.4892,
+    "auc": 0.8167,
+    "calibration_gap": -0.1358
+   },
+   "Free apps": {
+    "apps": 1804,
+    "actual": 0.3947,
+    "predicted": 0.3795,
+    "auc": 0.816,
+    "calibration_gap": -0.0152
+   },
+   "Paid apps": {
+    "apps": 128,
+    "actual": 0.0156,
+    "predicted": 0.0249,
+    "auc": null,
+    "calibration_gap": 0.0093
+   }
+  },
+  "fairness_summary": {
+   "groups_with_auc": 25,
+   "auc_min": 0.49572649572649574,
+   "auc_max": 0.934640522875817,
+   "auc_min_group": "FOOD_AND_DRINK",
+   "auc_max_group": "MAPS_AND_NAVIGATION",
+   "max_abs_calibration_gap": 0.15527176824291117,
+   "max_gap_group": "FOOD_AND_DRINK"
+  }
+ },
+ "recommend": {
+  "precision_at_k": {
+   "1": {
+    "content-based (engine)": 0.3965,
+    "popularity": 0.0248,
+    "random": 0.0373
+   },
+   "5": {
+    "content-based (engine)": 0.336,
+    "popularity": 0.0237,
+    "random": 0.0348
+   },
+   "10": {
+    "content-based (engine)": 0.3029,
+    "popularity": 0.0298,
+    "random": 0.0345
+   },
+   "25": {
+    "content-based (engine)": 0.2522,
+    "popularity": 0.033,
+    "random": 0.0338
+   }
+  },
+  "precision5_same_category": 0.3750517598343685,
+  "complaints": {
+   "ART_AND_DESIGN": [
+    "color",
+    "save",
+    "working",
+    "thing",
+    "bad",
+    "hate",
+    "really",
+    "like"
+   ],
+   "BEAUTY": [
+    "fake",
+    "install",
+    "time"
+   ],
+   "BOOKS_AND_REFERENCE": [
+    "books",
+    "library",
+    "reader",
+    "book",
+    "reading",
+    "read",
+    "pages",
+    "page"
+   ],
+   "BUSINESS": [
+    "laptop",
+    "business",
+    "calls",
+    "active",
+    "desktop",
+    "chat",
+    "file",
+    "extremely"
+   ],
+   "COMMUNICATION": [
+    "contacts",
+    "messaging",
+    "group",
+    "gmail",
+    "stock",
+    "cache",
+    "messages",
+    "desktop"
+   ],
+   "DATING": [
+    "dating",
+    "men",
+    "profiles",
+    "meet",
+    "profile",
+    "miles",
+    "girls",
+    "proof"
+   ],
+   "EDUCATION": [
+    "learning",
+    "question",
+    "learn",
+    "text",
+    "wrong",
+    "way",
+    "know",
+    "bad"
+   ],
+   "ENTERTAINMENT": [
+    "cable",
+    "episodes",
+    "cast",
+    "movies",
+    "episode",
+    "channel",
+    "provider",
+    "netflix"
+   ],
+   "FAMILY": [
+    "son",
+    "loves",
+    "daughter",
+    "child",
+    "record",
+    "cheating",
+    "bars",
+    "fixes"
+   ],
+   "FINANCE": [
+    "banks",
+    "fingerprint",
+    "deposit",
+    "loan",
+    "branch",
+    "ssn",
+    "banking",
+    "payments"
+   ],
+   "FOOD_AND_DRINK": [
+    "delivery",
+    "recipe",
+    "orders",
+    "cold",
+    "restaurant",
+    "deliver",
+    "delivered",
+    "recipes"
+   ],
+   "GAME": [
+    "battle",
+    "boosters",
+    "crush",
+    "hints",
+    "attack",
+    "powerups",
+    "recharge",
+    "bonuses"
+   ],
+   "HEALTH_AND_FITNESS": [
+    "grams",
+    "weight",
+    "fitness",
+    "calories",
+    "exercises",
+    "meal",
+    "fat",
+    "exercise"
+   ],
+   "HOUSE_AND_HOME": [
+    "homes",
+    "outdated",
+    "search",
+    "horrible",
+    "waste",
+    "trying",
+    "don",
+    "useless"
+   ],
+   "LIBRARIES_AND_DEMO": [
+    "useless",
+    "hate",
+    "phone",
+    "fix",
+    "bad"
+   ],
+   "LIFESTYLE": [
+    "face",
+    "use",
+    "number",
+    "type",
+    "pictures",
+    "wish",
+    "sure",
+    "old"
+   ],
+   "MEDICAL": [
+    "appointment",
+    "doctors",
+    "appointments",
+    "doctor",
+    "medical",
+    "claims",
+    "schedule",
+    "health"
+   ],
+   "NEWS_AND_MAGAZINES": [
+    "cnn",
+    "headlines",
+    "article",
+    "news",
+    "articles",
+    "stories",
+    "feed",
+    "replacement"
+   ],
+   "PERSONALIZATION": [
+    "wallpapers",
+    "widgets",
+    "clock",
+    "launcher",
+    "wallpaper",
+    "weather",
+    "widget",
+    "default"
+   ],
+   "PHOTOGRAPHY": [
+    "pics",
+    "photos",
+    "camera",
+    "image",
+    "photo",
+    "images",
+    "gallery",
+    "pictures"
+   ],
+   "PRODUCTIVITY": [
+    "notes",
+    "pdfs",
+    "covers",
+    "files",
+    "cloud",
+    "paste",
+    "file",
+    "lists"
+   ],
+   "SHOPPING": [
+    "coupons",
+    "amazon",
+    "prime",
+    "cart",
+    "lists",
+    "ordered",
+    "item",
+    "products"
+   ],
+   "SOCIAL": [
+    "posts",
+    "wanna",
+    "social",
+    "browser",
+    "post",
+    "facebook",
+    "profiles",
+    "status"
+   ],
+   "SPORTS": [
+    "sports",
+    "golf",
+    "fifa",
+    "espn",
+    "fantasy",
+    "hole",
+    "scores",
+    "season"
+   ],
+   "TOOLS": [
+    "calculator",
+    "emojis",
+    "keyboard",
+    "alarm",
+    "emoji",
+    "clean",
+    "input",
+    "lock"
+   ],
+   "TRAVEL_AND_LOCAL": [
+    "hotel",
+    "flight",
+    "flights",
+    "hotels",
+    "boarding",
+    "booked",
+    "booking",
+    "reservation"
+   ],
+   "VIDEO_PLAYERS": [
+    "gallery",
+    "htc",
+    "supported",
+    "phones",
+    "videos",
+    "file",
+    "video",
+    "downloaded"
+   ]
+  },
+  "cases": {
+   "pomodoro study timer for students": {
+    "category": "EDUCATION",
+    "category_guess": {
+     "EDUCATION": 0.45,
+     "FAMILY": 0.188,
+     "SOCIAL": 0.088
+    },
+    "score": 48.2,
+    "verdict": "Tough market",
+    "p_success": 0.298,
+    "market": {
+     "demand_pct": 15.7,
+     "crowding_pct": 55.5,
+     "neighbour_rating_pct": 79.6,
+     "neighbour_installs": 5200,
+     "neighbour_rating": 4.33
+    },
+    "drivers": {
+     "Category": 1.0243,
+     "Content rating": -0.0936,
+     "Neighbours' installs": -1.1336,
+     "How crowded the niche is": -0.0017,
+     "Neighbours' ratings": 0.0595,
+     "Price model": 0.2687
+    },
+    "competitors": [
+     {
+      "app": "Students.ch",
+      "installs": 1000,
+      "rating": null,
+      "similarity": 0.69
+     },
+     {
+      "app": "DS-Students",
+      "installs": 100,
+      "rating": 4.8,
+      "similarity": 0.684
+     },
+     {
+      "app": "BU Study",
+      "installs": 10,
+      "rating": 5.0,
+      "similarity": 0.564
+     },
+     {
+      "app": "studentsLife by FH Kärnten",
+      "installs": 5000,
+      "rating": 4.4,
+      "similarity": 0.497
+     },
+     {
+      "app": "AU Students Zone (Result 2016)",
+      "installs": 10000,
+      "rating": 4.0,
+      "similarity": 0.486
+     }
+    ],
+    "niches": [
+     {
+      "genre": "Education",
+      "success_rate": 0.179,
+      "closeness": 0.323
+     },
+     {
+      "genre": "Productivity",
+      "success_rate": 0.393,
+      "closeness": 0.063
+     },
+     {
+      "genre": "Social",
+      "success_rate": 0.418,
+      "closeness": 0.054
+     }
+    ],
+    "complaints": [
+     "learning",
+     "question",
+     "learn",
+     "text",
+     "wrong"
+    ],
+    "winning_words": [
+     "student",
+     "planner"
+    ]
+   },
+   "AI photo editor that removes backgrounds": {
+    "category": "PHOTOGRAPHY",
+    "category_guess": {
+     "PHOTOGRAPHY": 0.693,
+     "ART_AND_DESIGN": 0.066,
+     "COMICS": 0.048
+    },
+    "score": 87.2,
+    "verdict": "Strong opportunity",
+    "p_success": 0.69,
+    "market": {
+     "demand_pct": 82.2,
+     "crowding_pct": 83.0,
+     "neighbour_rating_pct": 63.4,
+     "neighbour_installs": 326200,
+     "neighbour_rating": 4.25
+    },
+    "drivers": {
+     "Category": 0.5658,
+     "Content rating": -0.0936,
+     "Neighbours' installs": 1.0335,
+     "How crowded the niche is": -0.0279,
+     "Neighbours' ratings": 0.03,
+     "Price model": 0.2687
+    },
+    "competitors": [
+     {
+      "app": "CG Backgrounds",
+      "installs": 500,
+      "rating": 4.0,
+      "similarity": 0.632
+     },
+     {
+      "app": "Best CG Backgrounds",
+      "installs": 500,
+      "rating": 3.6,
+      "similarity": 0.632
+     },
+     {
+      "app": "Blur Image Background Editor (Blur Photo Editor)",
+      "installs": 5000000,
+      "rating": 4.4,
+      "similarity": 0.567
+     },
+     {
+      "app": "Photo Background Changer 2018 - Blur Background",
+      "installs": 5000000,
+      "rating": 3.7,
+      "similarity": 0.562
+     },
+     {
+      "app": "Change photo background",
+      "installs": 5000000,
+      "rating": 3.8,
+      "similarity": 0.558
+     }
+    ],
+    "niches": [
+     {
+      "genre": "Photography",
+      "success_rate": 0.616,
+      "closeness": 0.589
+     },
+     {
+      "genre": "Personalization",
+      "success_rate": 0.293,
+      "closeness": 0.087
+     },
+     {
+      "genre": "Entertainment",
+      "success_rate": 0.302,
+      "closeness": 0.076
+     }
+    ],
+    "complaints": [
+     "pics",
+     "photos",
+     "camera",
+     "image",
+     "photo"
+    ],
+    "winning_words": [
+     "background",
+     "wallpapers",
+     "blur",
+     "changer",
+     "eraser"
+    ]
+   },
+   "budget expense tracker for college students": {
+    "category": "FINANCE",
+    "category_guess": {
+     "FINANCE": 0.36,
+     "FAMILY": 0.117,
+     "BUSINESS": 0.079
+    },
+    "score": 29.9,
+    "verdict": "Tough market",
+    "p_success": 0.162,
+    "market": {
+     "demand_pct": 16.0,
+     "crowding_pct": 46.3,
+     "neighbour_rating_pct": 93.6,
+     "neighbour_installs": 5500,
+     "neighbour_rating": 4.41
+    },
+    "drivers": {
+     "Category": 0.1641,
+     "Content rating": -0.0936,
+     "Neighbours' installs": -1.1041,
+     "How crowded the niche is": 0.0049,
+     "Neighbours' ratings": 0.0935,
+     "Price model": 0.2687
+    },
+    "competitors": [
+     {
+      "app": "Money Lover: Expense Tracker, Budget Planner",
+      "installs": 1000000,
+      "rating": 4.4,
+      "similarity": 0.554
+     },
+     {
+      "app": "Money Manager Expense & Budget",
+      "installs": 5000000,
+      "rating": 4.6,
+      "similarity": 0.512
+     },
+     {
+      "app": "Students.ch",
+      "installs": 1000,
+      "rating": null,
+      "similarity": 0.48
+     },
+     {
+      "app": "DS-Students",
+      "installs": 100,
+      "rating": 4.8,
+      "similarity": 0.476
+     },
+     {
+      "app": "My Budget Book",
+      "installs": 100000,
+      "rating": 4.7,
+      "similarity": 0.388
+     }
+    ],
+    "niches": [
+     {
+      "genre": "Health & Fitness",
+      "success_rate": 0.39,
+      "closeness": 0.183
+     },
+     {
+      "genre": "Finance",
+      "success_rate": 0.27,
+      "closeness": 0.159
+     },
+     {
+      "genre": "Education",
+      "success_rate": 0.179,
+      "closeness": 0.153
+     }
+    ],
+    "complaints": [
+     "banks",
+     "fingerprint",
+     "deposit",
+     "loan",
+     "branch"
+    ],
+    "winning_words": [
+     "money",
+     "planner",
+     "manager"
+    ]
+   },
+   "recipe app that plans meals from what is in your fridge": {
+    "category": "FOOD_AND_DRINK",
+    "category_guess": {
+     "FOOD_AND_DRINK": 0.558,
+     "LIFESTYLE": 0.09,
+     "COMMUNICATION": 0.055
+    },
+    "score": 65.1,
+    "verdict": "Promising",
+    "p_success": 0.444,
+    "market": {
+     "demand_pct": 61.9,
+     "crowding_pct": 34.2,
+     "neighbour_rating_pct": 40.4,
+     "neighbour_installs": 98800,
+     "neighbour_rating": 4.16
+    },
+    "drivers": {
+     "Category": 0.1654,
+     "Content rating": -0.0936,
+     "Neighbours' installs": 0.4067,
+     "How crowded the niche is": 0.0145,
+     "Neighbours' ratings": -0.0075,
+     "Price model": 0.2687
+    },
+    "competitors": [
+     {
+      "app": "Cook'n Recipe App",
+      "installs": 10000,
+      "rating": 3.4,
+      "similarity": 0.424
+     },
+     {
+      "app": "Simple Recipes",
+      "installs": 500000,
+      "rating": 4.7,
+      "similarity": 0.376
+     },
+     {
+      "app": "Easy Recipes",
+      "installs": 100000,
+      "rating": 4.7,
+      "similarity": 0.376
+     },
+     {
+      "app": "Recipe Keeper",
+      "installs": 100000,
+      "rating": 4.4,
+      "similarity": 0.361
+     },
+     {
+      "app": "Dr. Oetker recipe ideas",
+      "installs": 1000000,
+      "rating": 4.2,
+      "similarity": 0.347
+     }
+    ],
+    "niches": [
+     {
+      "genre": "Food & Drink",
+      "success_rate": 0.438,
+      "closeness": 0.409
+     },
+     {
+      "genre": "Shopping",
+      "success_rate": 0.525,
+      "closeness": 0.053
+     },
+     {
+      "genre": "Health & Fitness",
+      "success_rate": 0.39,
+      "closeness": 0.065
+     }
+    ],
+    "complaints": [
+     "delivery",
+     "recipe",
+     "orders",
+     "cold",
+     "restaurant"
+    ],
+    "winning_words": [
+     "meal",
+     "planner",
+     "cookbook"
+    ]
+   },
+   "dating app for dog owners": {
+    "category": "DATING",
+    "category_guess": {
+     "DATING": 0.65,
+     "SOCIAL": 0.167,
+     "BOOKS_AND_REFERENCE": 0.04
+    },
+    "score": 18.0,
+    "verdict": "High risk",
+    "p_success": 0.084,
+    "market": {
+     "demand_pct": 44.4,
+     "crowding_pct": 45.0,
+     "neighbour_rating_pct": 39.1,
+     "neighbour_installs": 37500,
+     "neighbour_rating": 4.15
+    },
+    "drivers": {
+     "Category": -1.4759,
+     "Content rating": -0.0936,
+     "Neighbours' installs": -0.1016,
+     "How crowded the niche is": 0.0059,
+     "Neighbours' ratings": -0.0096,
+     "Price model": 0.2687
+    },
+    "competitors": [
+     {
+      "app": "CMB Free Dating App",
+      "installs": 1000000,
+      "rating": 4.0,
+      "similarity": 0.456
+     },
+     {
+      "app": "POF Free Dating App",
+      "installs": 50000000,
+      "rating": 4.2,
+      "similarity": 0.454
+     },
+     {
+      "app": "Dating.dk",
+      "installs": 100000,
+      "rating": 3.7,
+      "similarity": 0.439
+     },
+     {
+      "app": "Downers Grove AH",
+      "installs": 100,
+      "rating": null,
+      "similarity": 0.418
+     },
+     {
+      "app": "NoBuffDating - Free Dating App",
+      "installs": 100000,
+      "rating": 4.2,
+      "similarity": 0.418
+     }
+    ],
+    "niches": [
+     {
+      "genre": "Dating",
+      "success_rate": 0.194,
+      "closeness": 0.722
+     },
+     {
+      "genre": "Social",
+      "success_rate": 0.418,
+      "closeness": 0.131
+     }
+    ],
+    "complaints": [
+     "dating",
+     "men",
+     "profiles",
+     "meet",
+     "profile"
+    ],
+    "winning_words": []
+   }
+  }
+ }
+}

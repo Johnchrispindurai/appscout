@@ -1,0 +1,6 @@
+private/
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+notebooks/build.log
